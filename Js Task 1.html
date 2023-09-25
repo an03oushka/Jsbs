@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Number</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+            flex-direction: column;
+        }
+        h1, label, input, button, p {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <centre>
+    <h1>Number Reversal</h1>
+    <label for="numberInput">Enter a Number:</label>
+    <input type="text" id="numberInput">
+    <button id="reverseButton">Reverse</button>
+    <p id="result"></p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const numberInput = document.getElementById("numberInput");
+            const reverseButton = document.getElementById("reverseButton");
+            const resultElement = document.getElementById("result");
+  
+            reverseButton.addEventListener("click", function () {
+                
+                const inputNumber = numberInput.value;
+                if (!isNaN(inputNumber)) {
+                    
+                    const reversedNumber = parseFloat(inputNumber.toString().split('').reverse().join(''));
+                    resultElement.textContent = `Reversed Number: ${reversedNumber}`;
+                } else {
+                    resultElement.textContent = "Please enter a valid number.";
+                }
+            });
+        });
+    </script>
+    </centre>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mul & Div Cal</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+        }
+        .container {
+            border: 1px solid #ccc; 
+            padding: 20px; 
+            border-radius: 5px; 
+        }
+        h1, label, input, button, p {
+            margin: 5px;
+        }
+        input[type="number"] {
+            background-color: lightblue; 
+        }
+        button:focus {
+    outline: 2px solid #64d8f5; 
+}
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <h2>Multiplication and Division Calculator</h2>
+        <label for="num1">1st number:</label>
+        <input type="text" id="num1">
+        <br>
+        <label for="num2">2nd number:</label>
+        <input type="text" id="num2">
+        <br>
+        <button id="multiplyButton">Multiply</button>
+        <button id="divideButton">Divide</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const num1Input = document.getElementById("num1");
+            const num2Input = document.getElementById("num2");
+            const multiplyButton = document.getElementById("multiplyButton");
+            const divideButton = document.getElementById("divideButton");
+            const resultElement = document.getElementById("result");
+
+            multiplyButton.addEventListener("click", function () {
+                const num1 = parseFloat(num1Input.value);
+                const num2 = parseFloat(num2Input.value);
+                const result = num1 * num2;
+                resultElement.textContent = `Result is: ${result}`;
+            });
+
+            divideButton.addEventListener("click", function () {
+                const num1 = parseFloat(num1Input.value);
+                const num2 = parseFloat(num2Input.value);
+                if (num2 !== 0) {
+                    const result = num1 / num2;
+                    resultElement.textContent = `The Result is: ${result}`;
+                } else {
+                    resultElement.textContent = " The Result is: Division by zero is not allowed.";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

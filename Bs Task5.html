@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <!-- Include Bootstrap CSS via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Include FontAwesome icons via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Add custom CSS for label color */
+        .label-error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body custom-form-bg">
+                        <form>
+                            <!-- First Name -->
+                            <div class="mb-3 row">
+                                <label for="first-name" class="col-sm-2 col-form-label">First Name:</label>
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                        <input type="text" class="form-control" id="first-name" placeholder="First Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Last Name -->
+                            <div class="mb-3 row">
+                                <label for="last-name" class="col-sm-2 col-form-label">Last Name:</label>
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                        <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Email -->
+                            <div class="mb-3 row">
+                                <label for="email" class="col-sm-2 col-form-label">Email:</label>
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Phone -->
+                            <div class="mb-3 row">
+                                <label for="phone" class="col-sm-2 col-form-label">Phone:</label>
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-phone"></i>
+                                        </span>
+                                        <input type="tel" class="form-control" id="phone" placeholder="Phone">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Address -->
+                            <div class="mb-3 row">
+                                <label for="address" class="col-sm-2 col-form-label">Address:</label>
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-address-card"></i>
+                                        </span>
+                                        <input type="text" class="form-control" id="address" placeholder="Address">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- City -->
+                            <div class="mb-3 row">
+                                <label for="city" class="col-sm-2 col-form-label">City:</label>
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-city"></i>
+                                        </span>
+                                        <input type="text" class="form-control" id="city" placeholder="City">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- State -->
+                            <div class="mb-3 row">
+                                <label for="state" class="col-sm-2 col-form-label">State:</label>
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                        <select class="form-select" id="state" aria-label="State">
+                                            <option selected>Select State</option>
+                                            <option value="ny">New York</option>
+                                            <option value="ca">California</option>
+                                            <option value="tx">Texas</option>
+                                            <!-- Add more states as needed -->
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                           <!-- Hosting Question and Project Description -->
+<div class="mb-3 row">
+<!-- Hosting Question and Project Description -->
+<div class="mb-3 row">
+    <!-- Hosting Question -->
+    <div class="col-sm-6">
+        <label class="col-form-label">Do you have hosting?</label>
+    </div>
+    <div class="col-sm-6">
+        <div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="hosting" id="hosting-yes" value="yes">
+                <label class="form-check-label" for="hosting-yes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="hosting" id="hosting-no" value="no">
+                <label class="form-check-label" for="hosting-no">No</label>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project Description -->
+<div class="mb-3 row">
+    <div class="col-sm-2">
+        <label for="project-description" class="col-form-label">Project Description:</label>
+    </div>
+    <div class="col-sm-10">
+        <div class="input-group">
+            <span class="input-group-text">
+                <i class="fas fa-pencil-alt"></i>
+            </span>
+            <textarea class="form-control" id="project-description" placeholder="Project Description"></textarea>
+        </div>
+    </div>
+</div>
+
+
+                            <!-- Customize the "Send" button -->
+                             <!-- Send Button -->
+             <div class="mb-3 text-center">
+                <button type="button" id="sendButton" class="btn custom-button">
+                    <i class="fas fa-paper-plane"></i> Send
+                </button>
+            </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JavaScript (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alphabetical Order Javascript</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+            flex-direction: column;
+        }
+        h1, label, input, button, p {
+            margin: 5px;
+            #result {
+            font-size: 24px;
+            margin-top: 10px; 
+        }
+        }
+    </style>
+</head>
+<body>
+    <h2>Alphabetical Order Javascript</h2>
+    <label for="stringInput">Enter a String:</label>
+    <input type="text" id="stringInput">
+    <button id="sortButton">Sort</button>
+    <p id="result"></p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const stringInput = document.getElementById("stringInput");
+            const sortButton = document.getElementById("sortButton");
+            const resultElement = document.getElementById("result");
+
+            sortButton.addEventListener("click", function () {
+                const inputString = stringInput.value;
+                const sortedString = sortStringAlphabetically(inputString);
+                resultElement.textContent = `Sorted String: ${sortedString}`;
+            });
+
+            function sortStringAlphabetically(str) {
+                return str.split('').sort().join('');
+            }
+        });
+    </script>
+</body>
+</html>

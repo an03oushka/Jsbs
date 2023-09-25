@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Cards</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS */
+        .card {
+            border: none;
+            box-shadow: 5px 5px 5px #888888;
+        }
+
+       
+        .card-footer {
+            border-top: 1px solid #ccc;
+            background-color: #f8f9fa;
+            display: flex; /* Display children inline */
+            justify-content: space-between; /* Distribute space between children */
+            padding: 8px; /* Add padding to space out links */
+        }
+
+        .card-footer a {
+            font-weight: bold;
+            color: rgb(252, 213, 41);
+            flex-grow: 1; /* Grow to fill available space */
+            margin: 0 4px; /* Add margin to space out links */
+            text-align: center; /* Center align text */
+        }
+        .card {
+            border: none;
+            box-shadow: 5px 5px 5px #888888;
+            height: 550px; /* Set a fixed height for all cards */
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+            <!-- Black line above cards -->
+            <hr style="border-top: 1px solid black; margin-top: 10;">
+
+        <div class="row">
+            <!-- First Card -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="bs1.png" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <p class="card-text">Cards for display in portfolio style material design by Google</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Link 1</a>
+                        <a href="#" class="card-link">Link 2</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Card -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="bs2.png" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <p class="card-text">Cards for display in portfolio style material design by Google</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Link 1</a>
+                        <a href="#" class="card-link">Link 2</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Card -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="bs2.png" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <p class="card-text">Cards for display in portfolio style material design by Google</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Link 1</a>
+                        <a href="#" class="card-link">Link 2</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fourth Card -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="bs2.png" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <p class="card-text">Cards for display in portfolio style material design by Google</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Link 1</a>
+                        <a href="#" class="card-link">Link 2</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

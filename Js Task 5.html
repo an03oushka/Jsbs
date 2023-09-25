@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+        .error-input {
+            border: 1px solid red;
+        }
+        .error-message {
+            float: left;
+            margin-left: -200px; /* Adjust this value as needed */
+            margin-top: -20px; /* Adjust this value as needed */
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Validation</h2>
+    <form id="contactForm">
+        <div>
+            <label for="name">Name:</label>
+            <span id="nameError" class="error-message"></span>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="email">Email:</label>
+            <span id="emailError" class="error-message"></span>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="website">Website:</label>
+            <span id="websiteError" class="error-message"></span>
+            <input type="url" id="website" name="website" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="message">Message:</label>
+            <span id="messageError" class="error-message"></span>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function (event) {
+            let valid = true;
+
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const website = document.getElementById('website');
+            const message = document.getElementById('message');
+
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const websiteError = document.getElementById('websiteError');
+            const messageError = document.getElementById('messageError');
+
+            nameError.textContent = '';
+            emailError.textContent = '';
+            websiteError.textContent = '';
+            messageError.textContent = '';
+
+            if (!name.value.trim()) {
+                nameError.textContent = 'This field is required';
+                name.classList.add('error-input');
+                valid = false;
+            } else {
+                name.classList.remove('error-input');
+            }
+
+            if (!email.value.trim()) {
+                emailError.textContent = 'A valid email address is required';
+                email.classList.add('error-input');
+                valid = false;
+            } else if (!isValidEmail(email.value)) {
+                emailError.textContent = 'Invalid email format';
+                email.classList.add('error-input');
+                valid = false;
+            } else {
+                email.classList.remove('error-input');
+            }
+
+            if (!website.value.trim()) {
+                websiteError.textContent = 'A valid URL is required';
+                website.classList.add('error-input');
+                valid = false;
+            } else if (!isValidURL(website.value)) {
+                websiteError.textContent = 'Invalid website URL';
+                website.classList.add('error-input');
+                valid = false;
+            } else {
+                website.classList.remove('error-input');
+            }
+
+            if (!message.value.trim()) {
+                messageError.textContent = 'This field is required';
+                message.classList.add('error-input');
+            } else {
+                message.classList.remove('error-input');
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+
+        function isValidEmail(email) {
+            const emailRegex = /^\S+@\S+\.\S+$/;
+            return emailRegex.test(email);
+        }
+
+        function isValidURL(url) {
+            try {
+                new URL(url);
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

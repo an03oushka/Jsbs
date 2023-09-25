@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        #video-container {
+            position: relative;
+            max-width: 50%;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color:none;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        button {
+            background-color:rgba(206, 204, 204, 0.911);
+            color:black;
+            border: 1px solid black;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            padding: 5px 10px;
+        }
+        #button-container {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video id="myVideo">
+            <source src="train-loader.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="controls">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn">Stop</button>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById("myVideo");
+        const startBtn = document.getElementById("startBtn");
+        const stopBtn = document.getElementById("stopBtn");
+
+        startBtn.addEventListener("click", () => {
+            video.play();
+        });
+
+        stopBtn.addEventListener("click", () => {
+            video.pause();
+        });
+    </script>
+</body>
+</html>
